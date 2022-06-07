@@ -26,7 +26,7 @@ If you are not an existing customer, but interested in learning more, try out a 
 # How to Install
 ### To install the Outreach Sequence Connector:
 1. Log in to your Yext account
-2. Navigate to **Knowledge Graph > Configuration > Linked Accounts** and select **+Add Linked Account** button next Outreach. This will prompt you to sign in to your Outreah account with OAuth.
+2. Navigate to **Knowledge Graph > Configuration > Linked Accounts** and select **+Add Linked Account** button next Outreach. This will prompt you to sign in to your Outreach account with OAuth.
 3. Copy the linked account ID from this page, you will need this during installation.
 4. Next, navigate to the Apps > Directory tab in the platform (or use the link provided above).
 5. Search for the Outreach Connector app and click Install.
