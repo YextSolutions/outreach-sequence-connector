@@ -1,0 +1,412 @@
+{
+  "$id": "outreach_outreachSequenceConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "displayName": "Outreach Sequence Connector",
+  "entityType": "outreach_outreachSequence",
+  "source": {
+    "sourceConfig": {
+      "apiPullConfig": {
+        "requestType": "GET",
+        "url": "https://api.outreach.io/api/v2/sequences",
+        "authentication": {
+          "oauth": {
+            "linkedAccount": "${{linkedAccountID}}"
+          }
+        },
+        "paginationControl": {
+          "cursorPagination": {
+            "pageKey": "links",
+            "cursor": "links.next",
+            "cursorType": "FULL_URL",
+            "detectCursorInHeader": false
+          }
+        },
+        "headers": {
+          "content-type": "application/vnd.api+json"
+        },
+        "queryParams": {},
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "data"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "type",
+        "path": "type"
+      },
+      {
+        "type": "JSON",
+        "header": "id",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.automationPercentage",
+        "path": "attributes.automationPercentage"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.bounceCount",
+        "path": "attributes.bounceCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.clickCount",
+        "path": "attributes.clickCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.createdAt",
+        "path": "attributes.createdAt"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.deliverCount",
+        "path": "attributes.deliverCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.description",
+        "path": "attributes.description"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.durationInDays",
+        "path": "attributes.durationInDays"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.enabled",
+        "path": "attributes.enabled"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.enabledAt",
+        "path": "attributes.enabledAt"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.failureCount",
+        "path": "attributes.failureCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.finishOnReply",
+        "path": "attributes.finishOnReply"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.lastUsedAt",
+        "path": "attributes.lastUsedAt"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.locked",
+        "path": "attributes.locked"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.maxActivations",
+        "path": "attributes.maxActivations"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.name",
+        "path": "attributes.name"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.negativeReplyCount",
+        "path": "attributes.negativeReplyCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.neutralReplyCount",
+        "path": "attributes.neutralReplyCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.numContactedProspects",
+        "path": "attributes.numContactedProspects"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.numRepliedProspects",
+        "path": "attributes.numRepliedProspects"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.openCount",
+        "path": "attributes.openCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.optOutCount",
+        "path": "attributes.optOutCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.positiveReplyCount",
+        "path": "attributes.positiveReplyCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.primaryReplyAction",
+        "path": "attributes.primaryReplyAction"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.primaryReplyPauseDuration",
+        "path": "attributes.primaryReplyPauseDuration"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.replyCount",
+        "path": "attributes.replyCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.scheduleCount",
+        "path": "attributes.scheduleCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.scheduleIntervalType",
+        "path": "attributes.scheduleIntervalType"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.secondaryReplyAction",
+        "path": "attributes.secondaryReplyAction"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.secondaryReplyPauseDuration",
+        "path": "attributes.secondaryReplyPauseDuration"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.sequenceStepCount",
+        "path": "attributes.sequenceStepCount"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.sequenceType",
+        "path": "attributes.sequenceType"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.shareType",
+        "path": "attributes.shareType"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.tags",
+        "path": "attributes.tags"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.throttleMaxAddsPerDay",
+        "path": "attributes.throttleMaxAddsPerDay"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.throttlePaused",
+        "path": "attributes.throttlePaused"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.transactional",
+        "path": "attributes.transactional"
+      },
+      {
+        "type": "JSON",
+        "header": "attributes.updatedAt",
+        "path": "attributes.updatedAt"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.calls.links.related",
+        "path": "relationships.calls.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.contentCategoryMemberships.data[].type",
+        "path": "relationships.contentCategoryMemberships.data[].type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.contentCategoryMemberships.data[].id",
+        "path": "relationships.contentCategoryMemberships.data[].id"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.contentCategoryMemberships.links.related",
+        "path": "relationships.contentCategoryMemberships.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.contentCategoryMemberships.meta.count",
+        "path": "relationships.contentCategoryMemberships.meta.count"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.creator.data.type",
+        "path": "relationships.creator.data.type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.creator.data.id",
+        "path": "relationships.creator.data.id"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.mailings.links.related",
+        "path": "relationships.mailings.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.owner.data.type",
+        "path": "relationships.owner.data.type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.owner.data.id",
+        "path": "relationships.owner.data.id"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.ruleset.data.type",
+        "path": "relationships.ruleset.data.type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.ruleset.data.id",
+        "path": "relationships.ruleset.data.id"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.sequenceStates.links.related",
+        "path": "relationships.sequenceStates.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.sequenceSteps.data[].type",
+        "path": "relationships.sequenceSteps.data[].type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.sequenceSteps.data[].id",
+        "path": "relationships.sequenceSteps.data[].id"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.sequenceSteps.links.related",
+        "path": "relationships.sequenceSteps.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.sequenceSteps.meta.count",
+        "path": "relationships.sequenceSteps.meta.count"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.tasks.links.related",
+        "path": "relationships.tasks.links.related"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.updater.data.type",
+        "path": "relationships.updater.data.type"
+      },
+      {
+        "type": "JSON",
+        "header": "relationships.updater.data.id",
+        "path": "relationships.updater.data.id"
+      },
+      {
+        "type": "JSON",
+        "header": "links.self",
+        "path": "links.self"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "addColumn": {
+        "newColumnHeader": "Prepend Landing Page URL",
+        "columnValue": "https://app2b.outreach.io/sequences/"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Prepend Landing Page URL",
+          "id"
+        ],
+        "newColumnHeader": "Full Landing Page URL",
+        "delimiter": ""
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "attributes.createdAt",
+            "attributes.enabledAt",
+            "attributes.lastUsedAt",
+            "attributes.updatedAt"
+          ]
+        },
+        "plugin": "outreach_formatDateTimes",
+        "function": "formatDateOnly"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "description",
+      "header": "attributes.description",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "attributes.name",
+      "subfieldPath": []
+    },
+    {
+      "field": "entityId",
+      "header": "id",
+      "subfieldPath": []
+    },
+    {
+      "field": "outreach_sequenceStepCount",
+      "header": "attributes.sequenceStepCount",
+      "subfieldPath": []
+    },
+    {
+      "field": "outreach_sequenceType",
+      "header": "attributes.sequenceType",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Full Landing Page URL",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "customSchedule": {
+      "timeZone": "America/New_York",
+      "startDate": "2022-06-12",
+      "startTime": "00:00",
+      "frequencyType": "WEEKLY"
+    },
+    "runMode": "COMPREHENSIVE"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "outreach_sequenceUpdatedDate",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Sequence Updated Date",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "dateType": {}
+  },
+  "typeId": "date"
+}

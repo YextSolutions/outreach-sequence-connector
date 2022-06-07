@@ -1,0 +1,7 @@
+{
+  "$id": "outreach_outreachSequence",
+  "$schema": "https://schema.yext.com/config/km/entity-type/v2",
+  "description": "Outreach Sequences are a series of touch points separated by intervals of time that are used during lead generation and outbound prospecting, helping to decide which strategies are most effective.",
+  "displayName": "Outreach Sequence",
+  "pluralDisplayName": "Outreach Sequences"
+}

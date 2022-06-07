@@ -1,0 +1,14 @@
+{
+  "$id": "outreach_outreachSequence.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Outreach Sequence-default",
+  "entityType": "outreach_outreachSequence",
+  "fields": [
+    "description",
+    "landingPageUrl",
+    "outreach_sequenceStepCount",
+    "outreach_sequenceType",
+    "outreach_sequenceUpdatedDate"
+  ],
+  "required": []
+}

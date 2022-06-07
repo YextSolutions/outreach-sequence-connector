@@ -1,0 +1,11 @@
+{
+  "$id": "outreach_sequenceStepCount",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Sequence Step Count",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "decimalType": {}
+  },
+  "typeId": "decimal"
+}
