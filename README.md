@@ -14,9 +14,9 @@ To use this template you will need to have the following:
 - An Outreach account
 - Linked your Outreach account in the Yext platform
 
-If you are an existing Yext customer, you can install the Outreach Sequence Connector, here https://www.yext.com/s/me/apps/84824
+If you are an existing Yext customer, you can install the Outreach Sequence Connector, here https://www.yext.com/s/me/apps/84824.
 
-If you are currently using a Yext sandbox account, you can install the Outreach Sequence Connector, here https://sandbox.yext.com/s/me/apps/139777.
+If you are currently using a Yext sandbox account, you can install the Outreach Sequence Connector, here https://sandbox.yext.com/s/me/apps/153187.
 
 If you are not an existing customer, but interested in learning more, try out a free trial here for a production account, or sign up for Hitchhikers and get started with a sandbox account, here https://hitchhikers.yext.com/. 
 
